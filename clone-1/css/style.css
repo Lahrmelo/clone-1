@@ -1,0 +1,88 @@
+/*RESET NO CSS*/ 
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+/*APLICANDO COR DE FUNDO NO CORPO DO HTML*/ 
+body{
+   background: #addd; 
+} 
+/*APLICANDO ESPANCAMENTO INTEIRO NO CABEÇALHO E NAS CAPAS*/ 
+header, section{
+    padding: 5rem;
+}
+header{
+    background-color: #2196f3;
+}
+
+main{
+    /*CONTEÚDO IRÁ FICAR CENTRALIZADO*/ 
+    margin: auto;
+
+/*APLICANDO A PROPRIEDADE GRID*/
+display: grid;
+
+/*APLICANDO ESPAÇO EM LINHAS ENTRE AS SECTION*/
+grid-row-gap: 1rem;
+
+/*APLICANDO COLUNAS E LINHAS NA PÁGINA*/
+grid-template-areas:
+´video-player   vídeo-player
+´vídeo-info     vídeo infor
+´actions        actions
+´channel        subscribe
+up-next         up-next;
+}
+.vídeo-player{
+    background-color: #ffeb3b;
+    grid-area: vídeo-player;  
+}
+.vídeo-infor{
+    background-color: #e91e63;
+    grid-area: vídeo-infor;
+}
+.actions{
+    background-color: #03a9f4;
+    grid-area: vídeo-actions;
+}
+.channel{
+    background-color: #673ab7;
+    grid-area: vídeo-channel;
+}
+.subscribe{
+    background-color: #8bc34a;
+    grid-area: vídeo-subscribe;
+}
+.ad{
+    background-color: #ff5722;
+    grid-area:subscribe;
+}
+.up-next{
+    background-color: #3f51b5;
+    grid-area:ad;
+
+    /Display: none esconde um elemento/
+    /display: none/
+
+}
+
+@media screen and (max-width: 700px){
+
+    .asd{
+        display: none;
+    }
+}
+/PLICANDO RESPONSIVIDADE/
+ @media creen and (min-width: 700px) {
+    main{
+        max-width: 1200px;
+
+        grid-template-areas:
+        video-player video-player ad
+        vídeo-player vídeo-player up-next;
+        vídeo-info actions up-next
+        channel subscribe up-next
+
+    }
+}
